@@ -28,6 +28,26 @@
   color: #61dafb;
 }
 
+.villeFavori {
+  width: 40px;
+  height: 40px;
+  background-image: url("./image/yellowStar.png");
+  background-size: 100%;
+  align-self: flex-start;
+  text-align: right;
+  border: none;
+}
+
+.pasFavori {
+  width: 40px;
+  height: 40px;
+  background-image: url("./image/whiteStar.png");
+  background-size: 100%;
+  align-self: flex-start;
+  text-align: right;
+  border: none;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

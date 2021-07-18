@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import "./App.css";
-import { BrowserRouter, Switch } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Accueil from "./components/Accueil";
 import Dashboard from "./components/Dashboard";
 import SignIn from "./components/SignIn";
 import PrivateRoute from "./components/PrivateRoute";
 import PublicRoute from "./components/PublicRoute";
-import VilleList from "./components/VilleList";
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 
 class App extends Component {
@@ -22,10 +22,6 @@ class App extends Component {
             exact
           />
           <PrivateRoute component={Dashboard} path="/dashboard" exact />
-          <Route
-            path="/villelist:id">
-              <VilleList villeList={cities} />
-            </Route>
         </Switch>
       </BrowserRouter>
     );

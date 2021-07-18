@@ -9,10 +9,13 @@ const SignIn = (props) => {
     }
 
     return (
-        <div>
-            <h1>Accès au compte</h1>
-
-            <button onClick={() => handleLogin()}>Se connecter</button>
+        <div className="container-fluid text-center">
+            <div className="row">
+                <div className="col-12">
+                    <h1 className="bp-5 mb-5">Accès au compte</h1>
+                    <button onClick={() => handleLogin()}>Se connecter</button>
+                </div>
+            </div>
         </div>
     );
 };

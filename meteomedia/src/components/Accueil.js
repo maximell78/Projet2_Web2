@@ -21,13 +21,16 @@ class Accueil extends Component {
 
     render() {
         return (
-            <div>
-                <h1>Accueil</h1>
-
-                {this.state.isLogin ? 
-                    <button onClick={() => this.handleLogout()}>Déconnection</button>
-                    : <Link to="/signin"><button>Connection</button></Link>
-                }
+            <div className="container-fluid text-center">
+                <div className="row">
+                    <div className="col-12">
+                        <h1 className="pb-5 mb-5">Accueil</h1>
+                        {this.state.isLogin ? 
+                            <button onClick={() => this.handleLogout()}>Déconnection</button>:
+                            <Link to="/signin"><button>Connection</button></Link>
+                        }
+                    </div>
+                </div>
             </div>
         );
     }

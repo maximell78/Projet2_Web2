@@ -1,19 +1,16 @@
 import React from "react";
+import VilleItem from "./VilleItem";
 
-class VilleList extends React.Component {
-    
-    render() {
-      const { villeInfo } = this.props;
-      return (
-        <div className="itemContainer">
-          <div className="leftContainer">            
-            <div className="itemDescription">
-              <h3>{villeInfo.name}</h3>
+function VilleList(props) {
+  return (
+      <div>
+          {props.villeItems.map((villeItem) => (
+            <div>
+              <VilleItem villeInfo={villeItem} key={villeItem.id} />
             </div>
-          </div>          
-        </div>
-      );
-    }
-  }
-  
-  export default VilleList;
+          ))}
+      </div>
+  );
+}
+
+export default VilleList;
