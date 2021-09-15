@@ -27,7 +27,7 @@ class Accueil extends Component {
                         <h1 className="pb-5 mb-5">Accueil</h1>
                         {this.state.isLogin ? 
                             <button onClick={() => this.handleLogout()}>Déconnection</button>:
-                            <Link to="/signin"><button>Connection</button></Link>
+                            <Link to="/signin"><button className="btn-primary rounded text-center">Connection</button></Link>
                         }
                     </div>
                 </div>

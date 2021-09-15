@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import "./App.css";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch } from "react-router-dom";
 import Accueil from "./components/Accueil";
 import Dashboard from "./components/Dashboard";
 import SignIn from "./components/SignIn";
 import PrivateRoute from "./components/PrivateRoute";
 import PublicRoute from "./components/PublicRoute";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import "../node_modules/bootstrap/dist/js/bootstrap";
+import "../node_modules/react-popper/dist/index.umd";
 
 
 class App extends Component {

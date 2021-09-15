@@ -1,6 +1,5 @@
 import React from "react";
-import prevision from "../services/MeteoData";
-import PrevisionList from "VilleList";
+import Compteur from "./Compteur"
 
 class VilleItem extends React.Component {
     constructor(props) {
@@ -20,24 +19,32 @@ class VilleItem extends React.Component {
 
     render() {
         const {villeInfo} = this.props;
-        const {villeFavori} = this.state;
         return (
             <div className="container-fluid card ml-5 pt-3 pb-3 mb-3">
                 <div className="row">
                     <div className="col-12">
-                        <div className="container-fluid">
+                        <div className="container-fluid pb-5">
                             <div className="row">
                                 <div className="col-4">
-                                    <p>{villeInfo.name} </p>
+                                    <h3>{villeInfo.name} </h3>                                    
+                                </div>                                
+                                <div className="col-4">
+                                    <Compteur/>
                                 </div>
                                 <div className="col-4">
-                                    
-                                </div>
-                                <div className="col-4">
-                                    <button onClick={this.handleClickFavorite} className= {villeFavori ? "villeFavori" : "pasFavori"}>
-                                    </button>
+                                    <p>0</p>
                                 </div>
                             </div>
+                        </div>
+                        <div className="container-fluid">
+                            <div className="row">
+                                <div className="col-12 pb-5">                                    
+                                    <h4>{villeInfo.description} </h4>
+                                </div>
+                                <div className="col-12 pb-3">                                    
+                                    <h4 className="text-center">{villeInfo.icon} </h4>
+                                </div>
+                            </div>                            
                         </div>
                     </div>
                 </div>                
